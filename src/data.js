@@ -227,7 +227,7 @@ export const skillGroups = [
   {
     title: 'Database',
     icon: Database,
-    skills: ['MongoDB'],
+    skills: ['MongoDB', 'Supabase'],
   },
   {
     title: 'Tools and Technologies',

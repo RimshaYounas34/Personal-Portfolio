@@ -8,7 +8,7 @@ import SocialIcons from '../components/SocialIcons.jsx'
 // Chhoti stats - sirf CV ke sach facts
 const stats = [
   { value: 'MERN', label: 'Stack' },
-  { end: 4, label: 'Projects' },
+  { end: 6, label: 'Projects' },
   { end: 2, label: 'Internships' },
   { end: 3.42, decimals: 2, label: 'BSCS CGPA' },
 ]
