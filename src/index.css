@@ -1,17 +1,17 @@
 /* index.css - poori website ki styling.
-   Colors neeche :root mein hain (aap ki photo ke dusty rose aur plum se). Wahin se badal sakti hain. */
+   Colors neeche :root mein hain (ab kala, safed aur neela). Wahin se badal sakti hain. */
 :root {
-  --bg: #FFF9F7;         /* page background (warm white) */
-  --blush: #F8E9ED;      /* halka gulabi background */
-  --rose: #D9A5B8;       /* dusty rose */
-  --accent: #9D3C6B;     /* links / chhote accents */
-  --plum: #4A1F42;       /* dark buttons, dark sections */
-  --ink: #2B1428;        /* headings */
-  --text: #5B4756;       /* normal text */
-  --muted: #8E7A88;
-  --border: #EBD7DE;
+  --bg: #FFFFFF;         /* page background (safed) */
+  --blush: #F2F6FC;      /* bohat halka neela-safed background */
+  --rose: #8DB9F5;       /* halka neela (decoration) */
+  --accent: #0B66DB;     /* neela - links / chhote accents (photo ke background se match) */
+  --plum: #0A0A0A;       /* kala - buttons, dark sections */
+  --ink: #0A0A0A;        /* headings */
+  --text: #3F4654;       /* normal text */
+  --muted: #6B7280;
+  --border: #E1E6EF;
   --surface: #FFFFFF;
-  --shadow: 0 10px 30px rgba(74, 31, 66, .08);
+  --shadow: 0 10px 30px rgba(10, 10, 10, .08);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -39,7 +39,7 @@ strong { color: var(--ink); }
 .icon-btn.inactive { opacity: .4; cursor: not-allowed; }
 
 /* ---------- Navbar ---------- */
-.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255, 249, 247, .92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255, 255, 255, .92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
 .navbar-bar { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 16px; }
 .wordmark { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 21px; color: var(--plum); }
 .nav-links { display: none; gap: 26px; }
@@ -63,9 +63,9 @@ strong { color: var(--ink); }
 .hero-description { max-width: 500px; font-size: 17px; }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
 .hero-visual { position: relative; display: flex; justify-content: center; }
-.blob-back { position: absolute; width: min(330px, 78vw); aspect-ratio: 1; background: var(--rose); opacity: .45; border-radius: 58% 42% 47% 53% / 46% 55% 45% 54%; transform: translate(18px, 14px) rotate(8deg); }
-.portrait { position: relative; width: min(320px, 76vw); aspect-ratio: 1; border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; overflow: hidden; border: 6px solid var(--surface); box-shadow: var(--shadow); background: var(--plum); display: flex; align-items: center; justify-content: center; }
-.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.blob-back { position: absolute; width: min(320px, 76vw); aspect-ratio: 4 / 5; background: var(--rose); opacity: .45; border-radius: 28px; transform: translate(16px, 16px); }
+.portrait { position: relative; width: min(320px, 76vw); aspect-ratio: 4 / 5; border-radius: 28px; overflow: hidden; border: 6px solid var(--surface); box-shadow: var(--shadow); background: #0173DD; display: flex; align-items: center; justify-content: center; }
+.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .portrait-initials { font-family: 'Playfair Display', serif; font-size: 70px; color: #fff; }
 .stats-row { margin-top: 56px; display: grid; grid-template-columns: repeat(2, 1fr); background: var(--surface); border: 1px solid var(--border); border-radius: 20px; box-shadow: var(--shadow); }
 .stats-row div { padding: 20px; text-align: center; display: flex; flex-direction: column; }
@@ -89,8 +89,8 @@ strong { color: var(--ink); }
 .pill-label { display: inline-block; font-size: 13px; font-weight: 600; color: var(--accent); padding: 5px 14px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); }
 .pill-label i, .hero-badge i { display: none; }
 .section-dark .section-title h2 { color: #fff; }
-.section-dark .section-title p { color: #E7CFDA; }
-.section-dark .pill-label { background: rgba(255, 255, 255, .1); border-color: rgba(255, 255, 255, .25); color: #F3D5E2; }
+.section-dark .section-title p { color: #C9D3E6; }
+.section-dark .pill-label { background: rgba(255, 255, 255, .1); border-color: rgba(255, 255, 255, .25); color: #DCE8FB; }
 .grid { display: grid; gap: 22px; }
 .grid-2, .grid-3 { grid-template-columns: 1fr; }
 @media (min-width: 700px) { .grid-2 { grid-template-columns: repeat(2, 1fr); } .grid-3 { grid-template-columns: repeat(2, 1fr); } }
@@ -102,9 +102,9 @@ strong { color: var(--ink); }
 .card h3 { font-size: 21px; margin-bottom: 8px; }
 .card-dark { background: rgba(255, 255, 255, .07); border-color: rgba(255, 255, 255, .15); box-shadow: none; }
 .card-dark h3 { color: #fff; }
-.card-dark p { color: #E7CFDA; }
-.card-dark .mono-label { color: #D9A5B8; }
-.card-dark .icon-box { background: rgba(255, 255, 255, .12); color: #F3D5E2; }
+.card-dark p { color: #C9D3E6; }
+.card-dark .mono-label { color: #8DB9F5; }
+.card-dark .icon-box { background: rgba(255, 255, 255, .12); color: #DCE8FB; }
 .card-head, .card-top { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
 .card-top { justify-content: space-between; }
 .card-head h3 { margin: 0; }
@@ -156,7 +156,7 @@ strong { color: var(--ink); }
 .madlib { display: flex; flex-direction: column; gap: 6px; }
 .madlib label { font-size: 14px; font-weight: 600; margin-top: 10px; color: var(--ink); }
 .madlib input, .madlib textarea { padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 12px; background: var(--bg); color: var(--ink); font-family: inherit; font-size: 15px; resize: vertical; }
-.madlib input:focus, .madlib textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(157, 60, 107, .12); }
+.madlib input:focus, .madlib textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(11, 102, 219, .15); }
 .contact-form .btn { align-self: flex-start; }
 .error { color: #C62828 !important; font-size: 13px; }
 .notice { padding: 16px; border-radius: 14px; background: var(--blush); border: 1px solid var(--border); }
@@ -164,7 +164,7 @@ strong { color: var(--ink); }
 .notice-buttons { display: flex; flex-wrap: wrap; gap: 10px; }
 
 /* ---------- Footer ---------- */
-.footer { background: var(--ink); color: #D9C3CE; padding: 56px 0 20px; }
+.footer { background: var(--ink); color: #C4C9D4; padding: 56px 0 20px; }
 .footer-grid { display: grid; gap: 32px; }
 @media (min-width: 800px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; } }
 .footer .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
@@ -181,7 +181,7 @@ strong { color: var(--ink); }
 .footer .social-icons a { border-color: rgba(255, 255, 255, .35); color: #fff; }
 .footer .social-icons a:hover { background: #fff; color: var(--plum); }
 .back-top { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; padding: 7px 16px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, .3); font-size: 13px; color: #fff; }
-.copyright { text-align: center; font-size: 13px; color: #A88B9B; margin-top: 40px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, .12); }
+.copyright { text-align: center; font-size: 13px; color: #8A909C; margin-top: 40px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, .12); }
 
 @media (max-width: 560px) { .education-card { flex-direction: column; } .section { padding: 64px 0; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
@@ -209,11 +209,11 @@ strong { color: var(--ink); }
 .portrait { animation: popIn 1s ease .25s both, float 6s ease-in-out 1.3s infinite; }
 
 /* Peeche wala gulabi blob dheere dheere shakal badalta hai */
-@keyframes morph {
-  0%, 100% { border-radius: 58% 42% 47% 53% / 46% 55% 45% 54%; transform: translate(18px, 14px) rotate(8deg); }
-  50% { border-radius: 42% 58% 55% 45% / 55% 42% 58% 45%; transform: translate(10px, 20px) rotate(-6deg); }
+@keyframes frameShift {
+  0%, 100% { transform: translate(16px, 16px); }
+  50% { transform: translate(10px, 22px); }
 }
-.blob-back { animation: morph 9s ease-in-out infinite; }
+.blob-back { animation: frameShift 7s ease-in-out infinite; }
 
 /* Scroll karne par cards nazar aate hain (ScrollEffects.jsx inhe class deta hai) */
 .reveal { opacity: 0; transform: translateY(32px); transition: opacity .8s ease, transform .8s ease; }
@@ -225,7 +225,7 @@ strong { color: var(--ink); }
 .nav-links a:hover::after { transform: scaleX(1); }
 
 /* Buttons par hover ka halka saaya */
-.btn:hover { box-shadow: 0 8px 20px rgba(74, 31, 66, .22); }
+.btn:hover { box-shadow: 0 8px 20px rgba(10, 10, 10, .22); }
 .btn svg { transition: transform .25s; }
 .btn:hover svg { transform: translateY(2px); }
 
@@ -239,7 +239,7 @@ strong { color: var(--ink); }
 .icon-box { transition: background .3s, color .3s; }
 
 /* Timeline ke dots dhadakte hain */
-@keyframes pulse { 0% { box-shadow: 0 0 0 2px var(--accent), 0 0 0 2px rgba(157, 60, 107, .4); } 100% { box-shadow: 0 0 0 2px var(--accent), 0 0 0 14px rgba(157, 60, 107, 0); } }
+@keyframes pulse { 0% { box-shadow: 0 0 0 2px var(--accent), 0 0 0 2px rgba(11, 102, 219, .4); } 100% { box-shadow: 0 0 0 2px var(--accent), 0 0 0 14px rgba(11, 102, 219, 0); } }
 .timeline-dot { animation: pulse 2s ease-out infinite; }
 
 /* Tags hover par upar uthte hain */
@@ -260,49 +260,54 @@ strong { color: var(--ink); }
 .theme-button:hover { transform: rotate(20deg); }
 
 [data-theme='dark'] {
-  --bg: #1A0F19;
-  --blush: #241522;
-  --surface: #2A1A28;
-  --accent: #E39AC0;
-  --plum: #F0C9D8;      /* dark mode mein "plum" halka gulabi ban jata hai */
-  --ink: #FBEFF3;
-  --text: #CDB6C4;
-  --muted: #A58C9C;
-  --border: #43304A;
-  --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+  --bg: #0A0A0A;
+  --blush: #111318;
+  --surface: #16181D;
+  --rose: #6FA3F0;
+  --accent: #5B9DFF;
+  --plum: #FFFFFF;      /* dark mode mein "plum" safed ban jata hai (buttons safed) */
+  --ink: #FFFFFF;
+  --text: #B9BFCB;
+  --muted: #8A909C;
+  --border: #2A2D35;
+  --shadow: 0 10px 30px rgba(0, 0, 0, .5);
 }
 body, .navbar, .card, .project-card, .stats-row, .section-alt { transition: background .3s, color .3s, border-color .3s; }
-[data-theme='dark'] .navbar { background: rgba(26, 15, 25, .92); }
-[data-theme='dark'] .btn-dark { background: var(--rose); color: #2B1428; }
-[data-theme='dark'] .btn-dark:hover { background: #fff; }
-[data-theme='dark'] .btn-light:hover, [data-theme='dark'] .tag:hover, [data-theme='dark'] .social-icons a:hover { color: #2B1428; }
-[data-theme='dark'] .card:hover .icon-box { color: #2B1428; }
-[data-theme='dark'] .section-dark { background: #3A1A36; }
-[data-theme='dark'] .footer { background: #0F080E; }
-[data-theme='dark'] .placeholder { background: linear-gradient(135deg, #3A1A36, #9D3C6B 70%, var(--rose)); }
-[data-theme='dark'] .project-badge { color: #4A1F42; }
-[data-theme='dark'] .status-badge { background: #1E3A28; color: #7FD99B; }
+[data-theme='dark'] .navbar { background: none; }
+[data-theme='dark'] .btn-dark { background: #FFFFFF; color: #0A0A0A; }
+[data-theme='dark'] .btn-dark:hover { background: var(--accent); color: #fff; }
+[data-theme='dark'] .btn-light { color: #fff; border-color: #fff; }
+[data-theme='dark'] .btn-light:hover, [data-theme='dark'] .tag:hover, [data-theme='dark'] .social-icons a:hover { color: #0A0A0A; }
+[data-theme='dark'] .card:hover .icon-box { color: #fff; }
+[data-theme='dark'] .section-dark { background: #0E1A33; }
+[data-theme='dark'] .footer { background: #000; border-top: 1px solid var(--border); }
+[data-theme='dark'] .placeholder { background: linear-gradient(135deg, #000, #0B66DB 70%, var(--rose)); }
+[data-theme='dark'] .project-badge { color: #0A0A0A; }
+[data-theme='dark'] .status-badge { background: #12301F; color: #7FD99B; }
 [data-theme='dark'] .portrait { border-color: var(--surface); }
+[data-theme='dark'] .avatar, [data-theme='dark'] .portrait-initials { color: #0A0A0A; }
+[data-theme='dark'] .social-icons a { border-color: #fff; color: #fff; }
+[data-theme='dark'] .icon-btn, [data-theme='dark'] .theme-button { color: #fff; }
 
 /* =========================================================
    WAPAS LAGAYA HUA: Intro, Marquee, Floating navbar, "My name is" form
    ========================================================= */
 
 /* ---------- Intro (shuru ka naam wala screen) ---------- */
-.intro { position: fixed; inset: 0; z-index: 1000; background: radial-gradient(circle at 50% 30%, #4A1F42, #1F0F1D 70%); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; gap: 20px; transition: opacity .7s, visibility .7s; }
+.intro { position: fixed; inset: 0; z-index: 1000; background: radial-gradient(circle at 50% 30%, #0F2F6B, #030303 70%); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; gap: 20px; transition: opacity .7s, visibility .7s; }
 .intro.hide { opacity: 0; visibility: hidden; }
-.intro-badge { font-size: 13px; font-weight: 600; color: #F3D5E2; border: 1px solid rgba(243, 213, 226, .35); padding: 6px 16px; border-radius: 999px; }
+.intro-badge { font-size: 13px; font-weight: 600; color: #DCE8FB; border: 1px solid rgba(243, 213, 226, .35); padding: 6px 16px; border-radius: 999px; }
 .intro-title { display: flex; flex-direction: column; align-items: center; gap: 4px; }
 .intro-hi { font-family: 'Dancing Script', cursive; font-size: clamp(32px, 6vw, 46px); color: var(--rose); }
 .intro-name { font-family: 'Playfair Display', serif; font-size: clamp(38px, 9vw, 74px); color: #fff; line-height: 1.1; }
 /* Har harf neeche se upar aata hai */
 .letter { display: inline-block; opacity: 0; animation: letterIn .6s ease forwards; }
 @keyframes letterIn { from { opacity: 0; transform: translateY(30px) scale(.8); } to { opacity: 1; transform: none; } }
-.intro-text { color: #D9BFCB; max-width: 420px; animation: fadeUp .8s ease 1.4s both; }
+.intro-text { color: #C4C9D4; max-width: 420px; animation: fadeUp .8s ease 1.4s both; }
 .intro-bar { width: 170px; height: 3px; background: rgba(255, 255, 255, .15); border-radius: 3px; overflow: hidden; }
 .intro-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--rose), #fff); animation: loadBar 3.3s ease forwards; }
 @keyframes loadBar { from { width: 0; } to { width: 100%; } }
-.intro-skip { position: absolute; bottom: 30px; right: 30px; background: none; border: 1px solid rgba(255, 255, 255, .3); color: #D9BFCB; font-family: inherit; font-size: 12px; padding: 8px 14px; border-radius: 8px; cursor: pointer; }
+.intro-skip { position: absolute; bottom: 30px; right: 30px; background: none; border: 1px solid rgba(255, 255, 255, .3); color: #C4C9D4; font-family: inherit; font-size: 12px; padding: 8px 14px; border-radius: 8px; cursor: pointer; }
 .intro-skip:hover { background: rgba(255, 255, 255, .1); }
 
 /* ---------- Marquee (chalti hui text patti) ---------- */

@@ -99,7 +99,7 @@ export const projects = [
       'GitHub',
     ],
     liveUrl: 'https://techkaam-website.vercel.app/',
-    codeUrl: 'https://github.com/RimshaYounas34',
+    codeUrl: 'https://github.com/RimshaYounas34/Techkaam-website',
     image: '/projects/techkaam.png',
   },
 
@@ -154,7 +154,7 @@ export const projects = [
       'CRUD Operations',
     ],
     liveUrl: '',
-    codeUrl: '',
+    codeUrl: 'https://github.com/RimshaYounas34/Blogging-Website',
     image: '/projects/blogging-website.png',
   },
 
@@ -174,7 +174,7 @@ export const projects = [
       'Responsive Design',
     ],
     liveUrl: 'https://globaltail-it-asset-solutions.vercel.app/',
-    codeUrl: 'https://github.com/RimshaYounas34',
+    codeUrl: 'https://github.com/RimshaYounas34/Globaltail-IT-Asset-Solutions',
     image: '/projects/global-it-assets.png',
   },
 
